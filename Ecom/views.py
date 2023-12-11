@@ -1,6 +1,9 @@
 from django.shortcuts import render , redirect
 from .models import *
 
+
+# Create your views here.
+
 def home(request):
     categories=Category.objects.filter(status=0)
     context={'category':categories}
@@ -24,4 +27,4 @@ def productDetails(request,cat_slug,prod_slug):
         return redirect("/")
     return render(request,"Ecom/productdetail.html",context)        
      
-# Create your views here.
+

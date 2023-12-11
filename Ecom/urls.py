@@ -14,7 +14,7 @@ urlpatterns= [
     path('register',authview.register , name="register"),
     path('login',authview.loginpage, name="login"),
 
-    path('add-to-cart',cart.addtocart,name="addtocart")
+    path('addtocart',cart.addtocart,name="addtocart")
 
     
 ]

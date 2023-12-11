@@ -4,8 +4,11 @@ from django.http.response import JsonResponse
 from Ecom.models import Product,Cart
 
 def addtocart(request):
+    
     if request.method == 'POST':
         prod_id = int(request.POST.get('product_id'))
+        print(prod_id)
+        exit
         product_check = Product.objects.get(id = prod_id)
         if(product_check):
             if(Cart.objects.filter(user = request.user.id , product_id = prod_id)):
